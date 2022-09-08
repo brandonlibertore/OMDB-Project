@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Roboto:wght@400;700;900&display=swap');
+
+/* 
+GENERICS
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", "lato";
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #242424;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    width: 100%;
+}
+
+select {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 16px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.row{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.no-cursor{
+    cursor: not-allowed;
+}
+
+
+/* 
+NAVBAR
+*/
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(./assets/movies.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    padding: 100px 0px;
+}
+
+.logo__img{
+    width: 150px;
+}
+
+.nav__link--list{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav__link{
+    padding: 0 24px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* 
+SEARCH 
+*/
+#search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+    padding-bottom: 24px;
+}
+
+.movie__search{
+    width: 40%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+}
+
+
+/* 
+DISPLAY
+*/
+#display{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 48px;
+}
+
+.display__padding{
+    margin: 0 64px;
+}
+
+.display__header{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-bottom: 48px;
+}
+
+.movies{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    color: white;
+}
+
+.movie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(90%/3);
+    padding: 24px 0px;
+    margin: 12px 12px;
+    border: 1px solid white;
+    transition: all 300ms ease;
+}
+
+.movie:hover{
+    transform: scale(1.05);
+    box-shadow: 0 12px 36px grey;
+}
+
+.poster{
+    display: flex;
+    align-items: center;
+}
+
+.poster__img{
+    width: 224px;
+    height: 350px;
+    border: 1px solid black;
+}
+
+.left__align{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.movie__title, .movie__year, .movie__type{
+    font-size: 18px;
+}
+
+.movie__page{
+    display: flex;
+}
+
+.small__phones{
+    display: none;
+}
+
+.left__arrow, .right__arrow{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.fa-arrow-left, .fa-arrow-right{
+    font-size: 18px;
+    color: black;
+}
+
+
+/* 
+LARGER DEVICES 
+*/
+@media (max-width: 820px) {
+    .poster__img{
+        width: 140px;
+        height: 200px;
+        border: 1px solid black;
+    }
+
+    .movie__title, .movie__year, .movie__type{
+        font-size: 10px;
+    }
+}
+
+/* 
+SMALL DEVICES 
+*/
+@media (max-width: 414px){
+    .logo__img{
+        width: 100px;
+    }
+
+    .nav__link{
+        padding: 0 4px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .display__header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #filter{
+        margin: 12px 0;
+    }
+
+    .movie{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border: 1px solid white;
+        transition: all 300ms ease;
+    }
+
+    .poster__img{
+        width: 140px;
+        height: 200px;
+        border: 1px solid black;
+    }
+
+    .movie__page{
+        display: none;
+    }
+
+    .small__phones{
+        display: flex;
+    }
+}
+

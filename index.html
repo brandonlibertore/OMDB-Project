@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMDb API Search</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <section id="navbar">
+        <div class="row">
+            <nav>
+                <figure>
+                    <img src="./assets/whitelogo.39850b27.png" class="logo__img" alt="">
+                </figure>
+                <ul class="nav__link--list">
+                    <li>
+                        <a href="#" class="nav__link no-cursor">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav__link no-cursor">Find Your Movie</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav__link no-cursor">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section id="search">
+        <div class="row center column">
+            <h1 class="title">Browse our movies</h1>
+            <input class="movie__search" type="text" placeholder="Search by Title or Keyword" onchange="searchMovie(event)">
+        </div>
+    </section>
+
+    <!-- MOVIE DISPLAY -->
+    <section id="display">
+        <div class="row center column display__padding">
+            <div class="display__header">
+                <h2>Search results:</h2>
+                <div class="movie__page">
+                    <button class="left__arrow" onclick="changePageLeft()">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button class="right__arrow" onclick="changePageRight()">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <select id="filter" onchange="filterMovies(event)">
+                    <option value="" disable>Sort</option>
+                    <option value="ASC_ALP">Alphabetically</option>
+                    <option value="DESC_ALP">Reverse Alphabetically</option>
+                    <option value="ASC_YEAR">Year</option>
+                    <option value="DESC_YEAR">Reverse Year</option>
+                </select>
+            </div>
+            <div class="movies">
+                <!-- MOVIES ARE DYNAMICALLY PLACED HERE TEMPLATE IS BELOW -->
+                <!-- <div class="movie">
+                    <figure class="poster">
+                        <img src="${movie.Poster}" alt="">
+                    </figure>
+                    <div class="left__align">
+                        <h3 class="movie__title">${movie.Title}</h3>
+                        <h3 class="movie__year">${movie.Year}</h3>
+                        <h3 class="movie__type">${movie.Type}</h3>
+                    </div>
+                </div> -->
+            </div>
+            <div class="movie__page small__phones">
+                <button class="left__arrow" onclick="changePageLeft()">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <button class="right__arrow" onclick="changePageRight()">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
