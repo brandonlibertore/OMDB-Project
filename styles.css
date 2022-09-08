@@ -40,6 +40,10 @@ select {
     max-width: 200px;
 }
 
+button, select{
+    cursor: pointer;
+}
+
 .row{
     width: 100%;
     max-width: 1200px;
